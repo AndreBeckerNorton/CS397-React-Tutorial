@@ -1,7 +1,7 @@
 const courseList = ({courses}) => (
   <div>
     { Object.entries(courses).map(([course, i]) => <div key={course}>
-        <p>{i.term} {i.number} {i.title} {i.meets}</p>
+        <p>{i.term} {i.meets} | {i.number} {i.title}</p>
         </div>) }
   </div>
 );
