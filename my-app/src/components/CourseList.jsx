@@ -1,22 +1,9 @@
-const CourseList = ({ courses }) => {
-  return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Course</th>
-            <th>Title</th>
-            <th>Meeting Time</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.values(courses).map(course => (
-            <Course key={course.number} course={course} />
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
-  
-  export default CourseList;
+const courseList = ({courses}) => (
+  <div>
+    { Object.entries(courses).map(([course, i]) => <div key={course}>
+        <p>{i.term} {i.number} {i.title} {i.meets}</p>
+        </div>) }
+  </div>
+);
+
+export default courseList;
