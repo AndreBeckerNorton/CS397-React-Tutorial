@@ -35,11 +35,12 @@ const schedule = {
 
 function App() {
   return (
-    <div>
-      <Banner title={schedule.title} />
-      <CourseList courses={schedule.courses} />
+    <div className="App">
+      <header className="App-header">
+      <Banner title={schedule.title}/>
+      <CourseList courses={schedule.courses}/>
+      </header>
     </div>
   );
 };
-
 export default App;

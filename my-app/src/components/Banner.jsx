@@ -1,5 +1,9 @@
-const Banner = ({schedule}) => {
-    <div> <h1>{schedule.title}</h1></div>
+const Banner = ({title}) => {
+  return (
+    <div> 
+      <h1>{title}</h1>
+    </div>
+  );
 };
   
   export default Banner; 

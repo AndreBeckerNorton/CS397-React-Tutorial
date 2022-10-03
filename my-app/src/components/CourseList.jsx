@@ -1,11 +1,22 @@
 const CourseList = ({ courses }) => {
-    return (
-      <div>
-        {Object.entries(courses).map(([id, course]) => (
-          <p key={id}>{`${course.term} CS ${course.number}: ${course.title}`}</p>
-        ))}
-      </div>
-    );
+  return (
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Title</th>
+            <th>Meeting Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {Object.values(courses).map(course => (
+            <Course key={course.number} course={course} />
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 };
   
   export default CourseList;
