@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Banner from './components/Banner'; 
 import CourseList from './components/CourseList';
 
@@ -33,14 +35,12 @@ const schedule = {
   }
 };
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className = "container">
       <Banner title={schedule.title}/>
       <CourseList courses={schedule.courses}/>
-      </header>
-    </div>
-  );
+  </div>
+  )
 };
 export default App;
