@@ -1,0 +1,47 @@
+.container {
+    margin: 0;
+  }
+  
+  .app {
+   margin: 2%;
+  }
+  
+  .course-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 17rem));
+  }
+  
+  .card {
+    width: 24%;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 3px;
+  }
+  
+  .topSection {
+    height: 60%;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    padding-bottom: 16px;
+  }
+  
+  #term-btns {
+    width: 400px;
+  }
+  
+  #term-btns > label {
+    width: 33%;
+  }
+  
+  #schedule {
+    height: 44px;
+  }
