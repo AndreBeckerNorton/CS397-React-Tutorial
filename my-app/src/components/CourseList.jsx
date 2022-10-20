@@ -19,7 +19,7 @@ const CourseList = ({ courses }) => {
         <>
             <div className="controls">
                 <TermSelector term={term} setTerm={setTerm} />
-                <button className="btn btn-primary" onClick={openModal}>Show Schedule</button>
+                <button onClick={openModal}>Show Schedule</button>
             </div>
             <ScheduleModal open={open} close={closeModal}>
                 <Cart selected={selected} />

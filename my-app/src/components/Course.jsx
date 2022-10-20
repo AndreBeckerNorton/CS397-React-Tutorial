@@ -1,11 +1,11 @@
-import { hasConflict } from '../utilities/time.js';
+import { hasConflict } from './time.jsx'
 import { Link } from 'react-router-dom';
 
 const Course = ({ course, selected, setSelected }) => {
   const isSelected = selected.includes(course);
   const isDisabled = !isSelected && hasConflict(course, selected);
   const style = {
-    backgroundColor:  isDisabled? 'lightgrey' : isSelected ? 'lightgreen' : 'white'
+    backgroundColor:  isDisabled? 'lightgrey' : isSelected ? 'red' : 'white'
   };
 
   const id = course.term[0] + course.number;
@@ -17,12 +17,12 @@ const Course = ({ course, selected, setSelected }) => {
     >
       <div className="card-body">
         <div className="topSection">
-          <div className="card-title">{course.term} CS {course.number}</div>
+          <div className="card-title">CS {course.number}</div>
           <div className="card-text">{course.title}</div>
         </div>
         <hr></hr>
-        <div className="card-text">{course.meets}</div>
-        <p><Link to={`/edit/${id}`}>Edit Course</Link></p>
+        <div className="card-text">{course.term}: {course.meets}</div>
+        <p><Link to={`/edit/${id}`}>Edit</Link></p>
       </div>
     </div>
   );
