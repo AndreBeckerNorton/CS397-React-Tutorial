@@ -5,9 +5,9 @@ import { useNavigate, useParams } from 'react-router-dom';
 const validateUserData = (key, val) => {
     switch (key) {
         case 'title':
-            return /(^\w\w)/.test(val) ? '' : 'must be least two characters';
+            return /(^\w\w)/.test(val) ? '' : 'Invalid input.';
         case 'meets':
-            return /^\w+@\w+[.]\w+/.test(val) ? '' : 'must contain name@domain.top-level-domain';
+            return /[M|Tu|W|Th|F]+ [0-1][0-9]:[0-9][0-9]-[0-1][0-9]:[0-9][0-9]/gm.test(val) ? '' : 'Invalid input';
         default: return '';
     }
 };
@@ -34,6 +34,10 @@ const EditForm = ({ courses }) => {
     const { id } = useParams();
     const [state, change] = useFormData(validateUserData, courses[id]);
     const submit = (evt) => {
+        evt.preventDefault();
+        if (!state.errors) {
+            console.log("Valid");
+        }
     };
 
     return (
