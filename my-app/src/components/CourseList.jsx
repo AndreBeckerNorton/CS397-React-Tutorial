@@ -17,7 +17,7 @@ const CourseList = ({ courses }) => {
 
     return (
         <>
-            <div className="controls">
+            <div>
                 <TermSelector term={term} setTerm={setTerm} />
                 <button onClick={openModal}>Show Schedule</button>
             </div>
